@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  rt:
+    build:
+      context: .    
+    image: $REG/rt/$SRV:$RT
+    network_mode: "host"    
+    command: asterisk -fpTU root
+    # restart: always
